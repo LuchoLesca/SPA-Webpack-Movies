@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPluguin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js'
@@ -30,9 +30,9 @@ module.exports = {
         filename: './index.html',
       }
     ),
-    new CopyWebpackPlugin([{
-        from: './src/styles/styles.css',
-        to: ''
-      }])
+    new CopyWebpackPluguin({
+        patterns: [{ from: './src/styles/styles.css',
+        to: '' }],
+      })
   ]
 }
