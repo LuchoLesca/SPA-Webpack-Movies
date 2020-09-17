@@ -1,21 +1,28 @@
-import getData from '../utils/getData';
+import {getFilms} from '../utils/getData';
 
-const Home =  async () => {
+const Home = async() => {
 
-    const characters = await getData();
+    const films = await getFilms();
+    let view = `<section class="films-container">
+                    <div class="films">`;
 
-    const view =  `
-        <div class="Characters">
-        ${characters.results.map(character => `
-        <article class="Character-item">
-            <a href="#/${character.id}/">
-            <img src="${character.image}" alt="${character.name}">
-            <h2>${character.name}</h2>
-            </a>
-        </article>
-                `).join('') }
-        </div  
-            `
+    films.results.map(film => {
+        const cards = `
+                    <div class="film-card">
+                        <a href="#/${film.id}">
+                            <img src="https://image.tmdb.org/t/p/original${film.poster_path}" class="film_img">
+                            <div class="film_texts">
+                                <h1 class="film_title">${film.title}</h1>
+                                <h2 class="film_release-date">${film.release_date}</h2>
+                            </div>
+                        </a>
+                    </div>                   
+                `
+        view += cards;
+    })
+
+    view += `</div></section>`
+
     return view;
 }
 

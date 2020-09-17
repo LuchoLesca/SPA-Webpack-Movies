@@ -1,13 +1,13 @@
 import getHash from '../utils/getHash';
 import getData from '../utils/getData';
 
-const Character =  async () => {
+const Film =  async () => {
 
-    const id = getHash();
+/*     const id = getHash();
     const character = await getData(id);
     const view = `
-        <div class="Characters-inner">
-            <article class="Character-card">
+        <div class="Film-inner">
+            <article class="Film-info">
                 <img src="${character.image}" alt="${character.name}">
                 <h2>${character.name}</h2>
             </article>
@@ -22,6 +22,6 @@ const Character =  async () => {
             </article>
         </div> 
     `
-    return view
-};
-export default Character;
+    return view */
+}; 
+export default Film; 
