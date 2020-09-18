@@ -1,5 +1,9 @@
 import './src/styles/styles.css';
-import router from './src/routes';
+import { loadIndex, router } from './src/routing/routing';
 
-window.addEventListener('load', router);
+window.addEventListener('load', () => {
+    loadIndex();
+    router();
+});
+
 window.addEventListener('hashchange', router);

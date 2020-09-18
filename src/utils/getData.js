@@ -1,5 +1,5 @@
 const apiKey = "8ed083af465ff4938a2b7222511a9336";
-const urlFilmsList = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`
+const urlFilmsList =`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US`;
 
 const getFilms = async () => {
     try{
@@ -15,6 +15,7 @@ const getFilms = async () => {
 
 const getDataFilm = async (id) => {
     const urlFilm = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
+    console.log(urlFilm)
     try{
         const response = await fetch(urlFilm)
         const json = await response.json()

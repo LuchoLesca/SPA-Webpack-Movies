@@ -1,8 +1,12 @@
 const resolveRoutes = (route) => {
 
-    if (route) {
-        const validRoute = route === '/' ? route : '/:id';
-        return validRoute;
+    switch (route[0]) {
+        case '/':
+            return `${route}`
+        case ':': 
+            return '/:id';
+        default:
+            return false
     }
 };
 
