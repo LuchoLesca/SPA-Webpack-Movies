@@ -1,9 +1,9 @@
 const apiKey = "8ed083af465ff4938a2b7222511a9336";
-const urlFilmsList =`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US`;
 
 const getFilms = async () => {
+    const url =`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US`;
     try{
-        const response = await fetch(urlFilmsList)
+        const response = await fetch(url)
         const json = await response.json()
         return json
     }catch(err){
@@ -14,10 +14,9 @@ const getFilms = async () => {
 // https://api.themoviedb.org/3/movie/${id}?api_key=https://api.themoviedb.org/3/movie/${id}?api_key=8ed083af465ff4938a2b7222511a9336&language=en-US&language=en-US
 
 const getDataFilm = async (id) => {
-    const urlFilm = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
-    console.log(urlFilm)
+    const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
     try{
-        const response = await fetch(urlFilm)
+        const response = await fetch(url)
         const json = await response.json()
         return json
     }catch(err){
@@ -25,4 +24,17 @@ const getDataFilm = async (id) => {
     }
 }
 
-export {getFilms, getDataFilm};
+
+const getCast = async (id) => {
+    const url = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}`;
+    try{
+        const response = await fetch(url)
+        const json = await response.json()
+        return json
+    }catch(err){
+        console.log("Error" + error);
+    }
+}
+
+
+export {getFilms, getDataFilm, getCast};

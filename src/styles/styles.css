@@ -62,7 +62,6 @@ body {
 /* ESTILO MAIN */
 
 .main-content {
-    background-color: var(--black1);
     min-height: 100vh;
 }
 
@@ -271,11 +270,83 @@ body {
     font-size: 0.9em;
 }
 
+/* EESTILOS CAST */
+
+.cast{
+    margin: 50px auto;
+    padding-left: 15px;
+    height: 370px;
+    width: 75%;
+}
+
+.cast_title{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+.cast_actors{
+    padding-bottom: 15px;
+    display: flex;
+    align-content: center;
+    overflow-x: auto;
+}
+
+.cast_actors::-webkit-scrollbar{
+    background-color: #202324;
+    color: #aba499;
+}
+
+.cast_actors::-webkit-scrollbar-corner{
+    background-color: #181a1b;
+}
+
+.cast_actors::-webkit-scrollbar-thumb{
+    background-color: #454a4d;
+}
+
+.actor-card{
+    overflow: hidden;
+    margin-right: 15px;
+    height: 270px;
+    width: 140px;
+    min-width: 140px;
+    border-radius: 10px;
+    border: .1px solid rgba(255, 255, 255, 0.219);
+}
+
+.actor_img{
+    height: 64%;
+    width: 100%;
+}
+
+
+.actor-card_texts{
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.actor_name,
+.actor_character{
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.actor_name{
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.3em
+}
+
+.actor_character{
+    font-size: .9em;
+    font-style: oblique;
+    color: #7d8081
+}
 
 /* ESTILOS ERROR 404 */
 
 .error-container {
-    background-color: black;
     text-align: center;
     font-size: 3em;
 }
