@@ -62,14 +62,14 @@ body {
 }
 
 .film-card {
-    box-shadow: 2px -4px 8px 0 rgba(255, 255, 255, 0.2), 2px -6px 20px 0 rgba(255, 255, 255, 0.19);
+    box-shadow: 2px -2px 10px 1px rgba(255, 255, 255, 0.432);
     border-radius: 10px;
     overflow: hidden;
     transition-duration: 650ms;
 }
 
 .film-card:hover {
-    box-shadow: 2px -4px 8px 0 rgba(255, 255, 255, 0.507), 2px -6px 20px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 8px 10px rgba(255, 255, 255, 0.507);
 }
 
 .film_img {
