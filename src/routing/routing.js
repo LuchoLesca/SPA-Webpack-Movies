@@ -11,7 +11,7 @@ const routes = {
     '/:id': Film
 };
 
-const loadIndex = () => {
+const loadMainHtml = () => {
     const header = document.querySelector('#header');
     header.innerHTML= Header();
 }
@@ -26,4 +26,4 @@ const router = async () => {
 
 };
 
-export {loadIndex, router};
+export {loadMainHtml, router};

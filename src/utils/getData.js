@@ -11,8 +11,6 @@ const getFilms = async () => {
     }
 }
 
-// https://api.themoviedb.org/3/movie/${id}?api_key=https://api.themoviedb.org/3/movie/${id}?api_key=8ed083af465ff4938a2b7222511a9336&language=en-US&language=en-US
-
 const getDataFilm = async (id) => {
     const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
     try{
@@ -23,7 +21,6 @@ const getDataFilm = async (id) => {
         console.log("Error" + error);
     }
 }
-
 
 const getCast = async (id) => {
     const url = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}`;

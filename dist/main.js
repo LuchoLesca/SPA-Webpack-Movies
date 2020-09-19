@@ -1,1 +1,208 @@
-!function(n){var r={};function e(t){if(r[t])return r[t].exports;var i=r[t]={i:t,l:!1,exports:{}};return n[t].call(i.exports,i,i.exports,e),i.l=!0,i.exports}e.m=n,e.c=r,e.d=function(n,r,t){e.o(n,r)||Object.defineProperty(n,r,{enumerable:!0,get:t})},e.r=function(n){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(n,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(n,"__esModule",{value:!0})},e.t=function(n,r){if(1&r&&(n=e(n)),8&r)return n;if(4&r&&"object"==typeof n&&n&&n.__esModule)return n;var t=Object.create(null);if(e.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:n}),2&r&&"string"!=typeof n)for(var i in n)e.d(t,i,function(r){return n[r]}.bind(null,i));return t},e.n=function(n){var r=n&&n.__esModule?function(){return n.default}:function(){return n};return e.d(r,"a",r),r},e.o=function(n,r){return Object.prototype.hasOwnProperty.call(n,r)},e.p="",e(e.s=4)}([function(n,r,e){"use strict";n.exports=function(n){var r=[];return r.toString=function(){return this.map((function(r){var e=function(n,r){var e=n[1]||"",t=n[3];if(!t)return e;if(r&&"function"==typeof btoa){var i=(a=t,c=btoa(unescape(encodeURIComponent(JSON.stringify(a)))),l="sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(c),"/*# ".concat(l," */")),o=t.sources.map((function(n){return"/*# sourceURL=".concat(t.sourceRoot||"").concat(n," */")}));return[e].concat(o).concat([i]).join("\n")}var a,c,l;return[e].join("\n")}(r,n);return r[2]?"@media ".concat(r[2]," {").concat(e,"}"):e})).join("")},r.i=function(n,e,t){"string"==typeof n&&(n=[[null,n,""]]);var i={};if(t)for(var o=0;o<this.length;o++){var a=this[o][0];null!=a&&(i[a]=!0)}for(var c=0;c<n.length;c++){var l=[].concat(n[c]);t&&i[l[0]]||(e&&(l[2]?l[2]="".concat(e," and ").concat(l[2]):l[2]=e),r.push(l))}},r}},function(n,r,e){var t=e(2),i=e(3);"string"==typeof(i=i.__esModule?i.default:i)&&(i=[[n.i,i,""]]);var o={insert:"head",singleton:!1};t(i,o);n.exports=i.locals||{}},function(n,r,e){"use strict";var t,i=function(){return void 0===t&&(t=Boolean(window&&document&&document.all&&!window.atob)),t},o=function(){var n={};return function(r){if(void 0===n[r]){var e=document.querySelector(r);if(window.HTMLIFrameElement&&e instanceof window.HTMLIFrameElement)try{e=e.contentDocument.head}catch(n){e=null}n[r]=e}return n[r]}}(),a=[];function c(n){for(var r=-1,e=0;e<a.length;e++)if(a[e].identifier===n){r=e;break}return r}function l(n,r){for(var e={},t=[],i=0;i<n.length;i++){var o=n[i],l=r.base?o[0]+r.base:o[0],s=e[l]||0,u="".concat(l," ").concat(s);e[l]=s+1;var f=c(u),d={css:o[1],media:o[2],sourceMap:o[3]};-1!==f?(a[f].references++,a[f].updater(d)):a.push({identifier:u,updater:m(d,r),references:1}),t.push(u)}return t}function s(n){var r=document.createElement("style"),t=n.attributes||{};if(void 0===t.nonce){var i=e.nc;i&&(t.nonce=i)}if(Object.keys(t).forEach((function(n){r.setAttribute(n,t[n])})),"function"==typeof n.insert)n.insert(r);else{var a=o(n.insert||"head");if(!a)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");a.appendChild(r)}return r}var u,f=(u=[],function(n,r){return u[n]=r,u.filter(Boolean).join("\n")});function d(n,r,e,t){var i=e?"":t.media?"@media ".concat(t.media," {").concat(t.css,"}"):t.css;if(n.styleSheet)n.styleSheet.cssText=f(r,i);else{var o=document.createTextNode(i),a=n.childNodes;a[r]&&n.removeChild(a[r]),a.length?n.insertBefore(o,a[r]):n.appendChild(o)}}function p(n,r,e){var t=e.css,i=e.media,o=e.sourceMap;if(i?n.setAttribute("media",i):n.removeAttribute("media"),o&&btoa&&(t+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(o))))," */")),n.styleSheet)n.styleSheet.cssText=t;else{for(;n.firstChild;)n.removeChild(n.firstChild);n.appendChild(document.createTextNode(t))}}var v=null,h=0;function m(n,r){var e,t,i;if(r.singleton){var o=h++;e=v||(v=s(r)),t=d.bind(null,e,o,!1),i=d.bind(null,e,o,!0)}else e=s(r),t=p.bind(null,e,r),i=function(){!function(n){if(null===n.parentNode)return!1;n.parentNode.removeChild(n)}(e)};return t(n),function(r){if(r){if(r.css===n.css&&r.media===n.media&&r.sourceMap===n.sourceMap)return;t(n=r)}else i()}}n.exports=function(n,r){(r=r||{}).singleton||"boolean"==typeof r.singleton||(r.singleton=i());var e=l(n=n||[],r);return function(n){if(n=n||[],"[object Array]"===Object.prototype.toString.call(n)){for(var t=0;t<e.length;t++){var i=c(e[t]);a[i].references--}for(var o=l(n,r),s=0;s<e.length;s++){var u=c(e[s]);0===a[u].references&&(a[u].updater(),a.splice(u,1))}e=o}}}},function(n,r,e){"use strict";e.r(r);var t=e(0),i=e.n(t)()(!1);i.push([n.i,"@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap);"]),i.push([n.i,":root {\r\n    --gold1: #f4bd76;\r\n    --gold2: #f6cd8f;\r\n    --gray1: #ffffff80;\r\n    --gray2: #f7d9d990;\r\n    --black1: #1a1b1f;\r\n    --black2: #30353b;\r\n    --shadow: 0 8px 8px;\r\n    --color_shadow: #00000033;\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    padding: 0;\r\n    background-color: #f4f4f4;\r\n    font-family: 'Roboto', sans-serif;\r\n}\r\n\r\n.header {\r\n    width: 100%;\r\n    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);\r\n}\r\n\r\n.nav {\r\n    color: white;\r\n    height: 80px;\r\n    border-bottom: 4px solid rgba(255,255,255,0.1);\r\n    display: flex;\r\n    align-items: center;\r\n    padding-left: 1%;\r\n}\r\n\r\n.links {\r\n  display: flex;\r\n  width: 100%;\r\n  align-items: center;\r\n  list-style: none;\r\n}\r\n\r\n.link{\r\n  display: inline-block;\r\n  color: inherit;\r\n  font-weight: 300;\r\n  text-decoration: none;\r\n  padding: 10px;\r\n}\r\n\r\n.films {\r\n  width: 94%;\r\n  margin: auto;\r\n  border: 1px solid black;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  padding-left: 1%\r\n}\r\n\r\n.film-card {\r\n  margin: 1%;\r\n  width: 12%;\r\n  border-radius: 10px;\r\n  border: 1px solid black;\r\n  overflow: hidden;\r\n}\r\n\r\n.film_img {\r\n  width: 100%;\r\n}\r\n\r\n.film_texts{\r\n  padding-top: 5px;\r\n  padding-left: 10px;\r\n}\r\n\r\n.film_title,\r\n.film_release-date{\r\n  margin: 10px;\r\n  font-family: Helvetica, sans-serif;\r\n}\r\n\r\n.film_title{\r\n  font-size: 1em;\r\n  font-weight: 800;\r\n  line-height: 1em;\r\n}\r\n\r\n.film_release-date{\r\n\r\n  font-family: Helvetica, sans-serif;\r\n  font-size: .9em;\r\n  color: #535353;\r\n  font-weight: 600;\r\n}",""]),r.default=i},function(n,r,e){"use strict";e.r(r);e(1);var t=()=>'\n    <div class="nav">\n        <div class="logo">\n            <h1 class="logo_name">MOVIES</h1>\n        </div>\n        <ul class="links">\n            <li><a href="/" class="link">Home</a></li>\n            <li><a href="#/about" class="link">About</a></li>\n        </ul>\n    </div>\n    ';function i(n,r,e,t,i,o,a){try{var c=n[o](a),l=c.value}catch(n){return void e(n)}c.done?r(l):Promise.resolve(l).then(t,i)}var o="https://api.themoviedb.org/3/discover/movie?api_key=".concat("8ed083af465ff4938a2b7222511a9336","&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1"),a=function(){var n,r=(n=function*(){try{var n=yield fetch(o);return yield n.json()}catch(n){console.log("Error"+error)}},function(){var r=this,e=arguments;return new Promise((function(t,o){var a=n.apply(r,e);function c(n){i(a,t,o,c,l,"next",n)}function l(n){i(a,t,o,c,l,"throw",n)}c(void 0)}))});return function(){return r.apply(this,arguments)}}();function c(n,r,e,t,i,o,a){try{var c=n[o](a),l=c.value}catch(n){return void e(n)}c.done?r(l):Promise.resolve(l).then(t,i)}var l=()=>location.hash.slice(1).toLocaleLowerCase().split("/")[1]||"/";function s(n,r,e,t,i,o,a){try{var c=n[o](a),l=c.value}catch(n){return void e(n)}c.done?r(l):Promise.resolve(l).then(t,i)}var u=()=>'\n        <div class="Error404">\n            <h2> Error 404 </>\n         </div>   \n    ',f=n=>n.length<=3?"/"===n?n:"/:id":"/".concat(n);function d(n,r,e,t,i,o,a){try{var c=n[o](a),l=c.value}catch(n){return void e(n)}c.done?r(l):Promise.resolve(l).then(t,i)}var p={"/":function(){var n,r=(n=function*(){var n=yield a(),r="";return n.results.map(n=>{var e='\n            <section class="films-container">\n                <div class="films">\n                    <div class="film-card">\n                        <img src="https://image.tmdb.org/t/p/original'.concat(n.poster_path,'" class="film_img">\n                        <div class="film_texts">\n                            <h1 class="film_title">').concat(n.title,'</h1>\n                            <h2 class="film_release-date">').concat(n.release_date,"</h2>\n                        </div>\n                    </div>                   \n                </div>\n            </section>");r+=e}),r},function(){var r=this,e=arguments;return new Promise((function(t,i){var o=n.apply(r,e);function a(n){c(o,t,i,a,l,"next",n)}function l(n){c(o,t,i,a,l,"throw",n)}a(void 0)}))});return function(){return r.apply(this,arguments)}}(),"/:id":function(){var n,r=(n=function*(){},function(){var r=this,e=arguments;return new Promise((function(t,i){var o=n.apply(r,e);function a(n){s(o,t,i,a,c,"next",n)}function c(n){s(o,t,i,a,c,"throw",n)}a(void 0)}))});return function(){return r.apply(this,arguments)}}(),"/contact":"Contact"},v=function(){var n,r=(n=function*(){var n=document.querySelector(".header"),r=document.querySelector(".main-content");n.innerHTML=yield t();var e=l(),i=yield f(e),o=p[i]?p[i]:u;r.innerHTML=yield o()},function(){var r=this,e=arguments;return new Promise((function(t,i){var o=n.apply(r,e);function a(n){d(o,t,i,a,c,"next",n)}function c(n){d(o,t,i,a,c,"throw",n)}a(void 0)}))});return function(){return r.apply(this,arguments)}}();window.addEventListener("load",v),window.addEventListener("hashchange",v)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_styles_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/styles/styles.css */ \"./src/styles/styles.css\");\n/* harmony import */ var _src_styles_styles_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_styles_styles_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _src_routing_routing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/routing/routing */ \"./src/routing/routing.js\");\n\n\nwindow.addEventListener('load', () => {\n  Object(_src_routing_routing__WEBPACK_IMPORTED_MODULE_1__[\"loadIndex\"])();\n  Object(_src_routing_routing__WEBPACK_IMPORTED_MODULE_1__[\"router\"])();\n});\nwindow.addEventListener('hashchange', _src_routing_routing__WEBPACK_IMPORTED_MODULE_1__[\"router\"]);\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./src/pages/Error404.js":
+/*!*******************************!*\
+  !*** ./src/pages/Error404.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Error404 = () => {\n  var view = \"\\n        <div class=\\\"error-container\\\">\\n            <h1 class=\\\"error-msg\\\"> Error 404 </h1>\\n         </div>   \\n    \";\n  return view;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Error404);\n\n//# sourceURL=webpack:///./src/pages/Error404.js?");
+
+/***/ }),
+
+/***/ "./src/pages/Film.js":
+/*!***************************!*\
+  !*** ./src/pages/Film.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_getHash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/getHash */ \"./src/utils/getHash.js\");\n/* harmony import */ var _utils_getData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/getData */ \"./src/utils/getData.js\");\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n\n\n\nvar Film = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator(function* () {\n    var id = Object(_utils_getHash__WEBPACK_IMPORTED_MODULE_0__[\"default\"])().slice(1);\n    var film = yield Object(_utils_getData__WEBPACK_IMPORTED_MODULE_1__[\"getDataFilm\"])(id);\n    var cast = yield Object(_utils_getData__WEBPACK_IMPORTED_MODULE_1__[\"getCast\"])(id);\n    var view = \"\\n        <div class=\\\"film-view\\\">\\n            <div class=\\\"film_bg-img-container\\\">\\n                <img src=\\\"http://image.tmdb.org/t/p/original\".concat(film.backdrop_path, \"\\\" class=\\\"film_bg-img\\\">\\n            </div>\\n            <div class=\\\"film-content\\\">\\n                <div class=\\\"poster-wrapper\\\">\\n                    <div class=\\\"poster\\\">\\n                        <img src=\\\"https://image.tmdb.org/t/p/original\").concat(film.poster_path, \"\\\" class=\\\"poster_img\\\">\\n                    </div>\\n                    <div class=\\\"poster-bottom\\\">\\n                    </div>\\n                </div>\\n                <div class=\\\"header-poster-wrapper\\\">\\n                    <section class=\\\"header-poster\\\">\\n                        <div class=\\\"title-content\\\">\\n                            <h1 class=\\\"title\\\">\").concat(film.title, \"(2019)</h1>\\n                            <h2 class=\\\"facts\\\">TV-MA Sci-Fi & Fantasy, Action & Adventure * 1h</h2>\\n                        </div>\\n                        <div class=\\\"chart-content\\\">\\n                            <h1 class=\\\"score\\\">\").concat(film.vote_average * 10, \"%</h1>\\n                            <h2 class=\\\"score-text\\\">User score</h2>\\n                        </div>\\n                        <div class=\\\"header_info\\\">\\n                            <h3 class=\\\"tagname\\\">\").concat(film.tagline, \"</h3>\\n                            <h1 class=\\\"info-title\\\">General view</h1>\\n                            <p class=\\\"overview\\\">\").concat(film.overview, \"</p>\\n                            <p class=\\\"film_genres-title\\\">Genres</p>\\n                            <p class=\\\"film_genres\\\">\").concat(film.genres.map(genre => genre.name).join(', '), \"</p>\\n                        </div>\\n                    </section>\\n                </div>\\n            </div>\\n        </div>\\n        <section class=\\\"cast\\\">\\n            <h2 class=\\\"cast_title\\\">Main Actors</h2>\\n            <div class=\\\"cast_actors\\\">\\n            \").concat(cast.cast.map(actor => {\n      var urlImg = actor.profile_path ? \"http://image.tmdb.org/t/p/w138_and_h175_face/\".concat(actor.profile_path) : \"https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg\";\n      return \"\\n            <article class=\\\"actor-card\\\">\\n                    <img src=\\\"\".concat(urlImg, \"\\\" class=\\\"actor_img\\\">\\n                    <div class=\\\"actor-card_texts\\\">\\n                        <h1 class=\\\"actor_name\\\">\").concat(actor.name, \"</h1>\\n                        <h2 class=\\\"actor_character\\\">\").concat(actor.character, \"</h2>\\n                    </div>\\n                </article>\");\n    }).join(''), \"\\n            </div>\\n        </section>\");\n    return view;\n  });\n\n  return function Film() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Film);\n/* \r\ncast: Array(40)\r\n0: {cast_id: 12, character: \"The Protagonist\", credit_id: \"5cab21a50e0a264c7df637a6\", gender: 2, id: 1117313, …}\r\n1: {cast_id: 13, character: \"Neil\", credit_id: \"5cab21b70e0a264c80f63b9c\", gender: 2, id: 11288, …} */\n\n//# sourceURL=webpack:///./src/pages/Film.js?");
+
+/***/ }),
+
+/***/ "./src/pages/Home.js":
+/*!***************************!*\
+  !*** ./src/pages/Home.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/getData */ \"./src/utils/getData.js\");\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n\n\nvar Home = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator(function* () {\n    var films = yield Object(_utils_getData__WEBPACK_IMPORTED_MODULE_0__[\"getFilms\"])();\n    var view = \"<section class=\\\"films-container\\\">\\n                    <div class=\\\"films\\\">\\n                     \".concat(films.results.map(film => \"\\n                        <div class=\\\"film-card\\\">\\n                            <a href=\\\"#/:\".concat(film.id, \"\\\">\\n                                <img src=\\\"https://image.tmdb.org/t/p/original\").concat(film.poster_path, \"\\\" class=\\\"film_img\\\">\\n                                <div class=\\\"film_texts\\\">\\n                                    <h1 class=\\\"film_title\\\">\").concat(film.title, \"</h1>\\n                                    <h2 class=\\\"film_release-date\\\">\").concat(film.release_date, \"</h2>\\n                                </div>\\n                            </a>\\n                        </div>\\n                        \")).join(''), \"                   \\n                    </div>\\n                </section>\\n                \");\n    return view;\n  });\n\n  return function Home() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Home);\n\n//# sourceURL=webpack:///./src/pages/Home.js?");
+
+/***/ }),
+
+/***/ "./src/routing/routing.js":
+/*!********************************!*\
+  !*** ./src/routing/routing.js ***!
+  \********************************/
+/*! exports provided: loadIndex, router */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"loadIndex\", function() { return loadIndex; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"router\", function() { return router; });\n/* harmony import */ var _templates_Header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../templates/Header */ \"./src/templates/Header.js\");\n/* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pages/Home */ \"./src/pages/Home.js\");\n/* harmony import */ var _pages_Film__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pages/Film */ \"./src/pages/Film.js\");\n/* harmony import */ var _pages_Error404__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/Error404 */ \"./src/pages/Error404.js\");\n/* harmony import */ var _utils_getHash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/getHash */ \"./src/utils/getHash.js\");\n/* harmony import */ var _utils_getResolveRoutes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/getResolveRoutes */ \"./src/utils/getResolveRoutes.js\");\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n\n\n\n\n\n\nvar routes = {\n  '/': _pages_Home__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  '/:id': _pages_Film__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n};\n\nvar loadIndex = () => {\n  var header = document.querySelector('#header');\n  header.innerHTML = Object(_templates_Header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n};\n\nvar router = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator(function* () {\n    var content = document.querySelector('#main-content');\n    var hash = Object(_utils_getHash__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n    /* Recorta el hash y devuelve / o lo que sigue de /, ej.: /about */\n\n    var route = Object(_utils_getResolveRoutes__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(hash);\n    /* Ruta que se a a buscar en objeto routes de arriba. Con el hash pasado, lo arregla para que se pueda emparejar a alguna de los atrib de routes */\n\n    var render = routes[route] ? routes[route] : _pages_Error404__WEBPACK_IMPORTED_MODULE_3__[\"default\"];\n    content.innerHTML = yield render();\n  });\n\n  return function router() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\n\n\n//# sourceURL=webpack:///./src/routing/routing.js?");
+
+/***/ }),
+
+/***/ "./src/styles/styles.css":
+/*!*******************************!*\
+  !*** ./src/styles/styles.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/styles/styles.css?");
+
+/***/ }),
+
+/***/ "./src/templates/Header.js":
+/*!*********************************!*\
+  !*** ./src/templates/Header.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Header = () => {\n  var view = \"\\n    <div class=\\\"nav\\\">\\n        <div class=\\\"logo\\\">\\n            <h1 class=\\\"logo_name\\\">MOVIES</h1>\\n        </div>\\n        <ul class=\\\"links\\\">\\n            <li><a href=\\\"#/\\\" class=\\\"link\\\">Home</a></li>\\n            <li><a href=\\\"#/about\\\" class=\\\"link\\\">About</a></li>\\n        </ul>\\n    </div>\\n    \";\n  return view;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Header);\n\n//# sourceURL=webpack:///./src/templates/Header.js?");
+
+/***/ }),
+
+/***/ "./src/utils/getData.js":
+/*!******************************!*\
+  !*** ./src/utils/getData.js ***!
+  \******************************/
+/*! exports provided: getFilms, getDataFilm, getCast */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getFilms\", function() { return getFilms; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getDataFilm\", function() { return getDataFilm; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getCast\", function() { return getCast; });\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\nvar apiKey = \"8ed083af465ff4938a2b7222511a9336\";\n\nvar getFilms = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator(function* () {\n    var url = \"https://api.themoviedb.org/3/movie/now_playing?api_key=\".concat(apiKey, \"&language=en-US\");\n\n    try {\n      var response = yield fetch(url);\n      var json = yield response.json();\n      return json;\n    } catch (err) {\n      console.log(\"Error\" + error);\n    }\n  });\n\n  return function getFilms() {\n    return _ref.apply(this, arguments);\n  };\n}(); // https://api.themoviedb.org/3/movie/${id}?api_key=https://api.themoviedb.org/3/movie/${id}?api_key=8ed083af465ff4938a2b7222511a9336&language=en-US&language=en-US\n\n\nvar getDataFilm = /*#__PURE__*/function () {\n  var _ref2 = _asyncToGenerator(function* (id) {\n    var url = \"https://api.themoviedb.org/3/movie/\".concat(id, \"?api_key=\").concat(apiKey, \"&language=en-US\");\n\n    try {\n      var response = yield fetch(url);\n      var json = yield response.json();\n      return json;\n    } catch (err) {\n      console.log(\"Error\" + error);\n    }\n  });\n\n  return function getDataFilm(_x) {\n    return _ref2.apply(this, arguments);\n  };\n}();\n\nvar getCast = /*#__PURE__*/function () {\n  var _ref3 = _asyncToGenerator(function* (id) {\n    var url = \"https://api.themoviedb.org/3/movie/\".concat(id, \"/credits?api_key=\").concat(apiKey);\n\n    try {\n      var response = yield fetch(url);\n      var json = yield response.json();\n      return json;\n    } catch (err) {\n      console.log(\"Error\" + error);\n    }\n  });\n\n  return function getCast(_x2) {\n    return _ref3.apply(this, arguments);\n  };\n}();\n\n\n\n//# sourceURL=webpack:///./src/utils/getData.js?");
+
+/***/ }),
+
+/***/ "./src/utils/getHash.js":
+/*!******************************!*\
+  !*** ./src/utils/getHash.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar getHash = () => {\n  return location.hash.slice(1).toLocaleLowerCase().split('/')[1] || '/';\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getHash);\n\n//# sourceURL=webpack:///./src/utils/getHash.js?");
+
+/***/ }),
+
+/***/ "./src/utils/getResolveRoutes.js":
+/*!***************************************!*\
+  !*** ./src/utils/getResolveRoutes.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar resolveRoutes = route => {\n  switch (route[0]) {\n    case '/':\n      return \"\".concat(route);\n\n    case ':':\n      return '/:id';\n\n    default:\n      return false;\n  }\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (resolveRoutes);\n\n//# sourceURL=webpack:///./src/utils/getResolveRoutes.js?");
+
+/***/ })
+
+/******/ });
