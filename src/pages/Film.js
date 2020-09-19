@@ -60,8 +60,3 @@ const Film = async() => {
 }
 
 export default Film;
-
-/* 
-cast: Array(40)
-0: {cast_id: 12, character: "The Protagonist", credit_id: "5cab21a50e0a264c7df637a6", gender: 2, id: 1117313, …}
-1: {cast_id: 13, character: "Neil", credit_id: "5cab21b70e0a264c80f63b9c", gender: 2, id: 11288, …} */
