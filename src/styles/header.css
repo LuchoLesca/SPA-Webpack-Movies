@@ -1,0 +1,28 @@
+.header {
+    width: 100%;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+}
+
+.nav {
+    height: 80px;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.link {
+    display: inline-block;
+    color: inherit;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px;
+}

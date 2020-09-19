@@ -1,0 +1,50 @@
+.films {
+    width: 94%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3%;
+    padding-left: 1%
+}
+
+.film-card {
+    box-shadow: 2px -4px 8px 0 rgba(255, 255, 255, 0.2), 2px -6px 20px 0 rgba(255, 255, 255, 0.19);
+    border-radius: 10px;
+    margin: 1%;
+    width: 12%;
+    min-height: 350px;
+    overflow: hidden;
+    transition-duration: 650ms;
+}
+
+.film-card:hover {
+    box-shadow: 2px -4px 8px 0 rgba(255, 255, 255, 0.507), 2px -6px 20px 0 rgba(255, 255, 255, 0.5);
+}
+
+.film_img {
+    width: 100%;
+}
+
+.film_texts {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.film_title,
+.film_release-date {
+    margin: 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+.film_title {
+    font-size: 1em;
+    font-weight: 800;
+    line-height: 1em;
+}
+
+.film_release-date {
+    font-family: Helvetica, sans-serif;
+    font-size: .9em;
+    color: #535353;
+    font-weight: 600;
+}
