@@ -1,7 +1,8 @@
 const apiKey = "8ed083af465ff4938a2b7222511a9336";
 
-const getFilms = async () => {
-    const url =`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US`;
+const getFilms = async (pag) => {
+    const page = pag ? pag : 1;
+    const url =`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=${page}`;
     try{
         const response = await fetch(url)
         const json = await response.json()

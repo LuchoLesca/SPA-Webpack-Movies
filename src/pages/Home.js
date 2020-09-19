@@ -2,7 +2,9 @@ import {getFilms} from '../utils/getData';
 
 const Home = async() => {
 
-    const films = await getFilms();
+    const page = Math.floor(Math.random() * (11 - 1)) + 1;
+
+    const films = await getFilms(page);
     const view = `<section class="films-container">
                     <div class="films">
                      ${films.results.map(film => 
